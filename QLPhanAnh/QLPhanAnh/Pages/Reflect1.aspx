@@ -81,7 +81,7 @@
 
     <div class="d-flex justify-content-center align-items-center mt-2">
             <%--<asp:Button ID="AddBusButton" runat="server" OnClick="AddBusButton_Click" Text="Thêm Mới" BackColor="#339933" BorderColor="#339933" CssClass="btn btn-primary" OnClientClick="" />--%>
-            <asp:Button ID="UpdateBusButton" runat="server" href="?page=<%=this.pivot%>" OnClick="UpdateBusButton_Click" Text="Phản Hồi" BackColor="#339933" BorderColor="#339933" CssClass="btn btn-primary ml-2" />
+            <asp:Button ID="UpdateBusButton" runat="server" href="?page=<%=this.pivot%>" OnClick="Button2_Click" Text="Phản Hồi" BackColor="#339933" BorderColor="#339933" CssClass="btn btn-primary ml-2" />
             <asp:Button ID="Clear" runat="server" OnClick="Clear_Click" Text="Mặc định" BackColor="#339933" BorderColor="#339933" CssClass="btn btn-primary ml-2" />
            <%-- <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Phản Hồi" BackColor="#339933" BorderColor="#339933" CssClass="btn btn-primary ml-2" />--%>
             <asp:Button ID="Button1" runat="server" OnClick="DeleteBusButton_CLick" Text="Xóa" BackColor="#ff1a1a" OnClientClick="return confirm('Bạn có muốn xóa không?')" BorderColor="#ff1a1a" CssClass="btn btn-primary ml-2" />
@@ -95,6 +95,7 @@
                 <asp:Button ID="Search" runat="server" href="?page=<%=this.pivot%>" OnClick="Search_Click" Text="Tìm kiếm" BackColor="#339933" BorderColor="#339933" CssClass="btn btn-primary" />
             </div>
         </div>
+
 
         <contenttemplate>
             <asp:Panel ID="pnTable" runat="server">

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net.Mail;
 using System.Reflection;
 using System.Web;
 using System.Web.UI;
@@ -358,18 +359,22 @@ namespace QLPhanAnh.Pages
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            BusinessLayer.DBAccess.Reflect reflect = HRFunctions.Instance.FindReflectByID(int.Parse(this.ReflectID.Value));
-            if (reflect != null)
-            {
-                reflect.ReflectTypeID = int.Parse(this.phananhlist.Text);
-                reflect.Title = this.tieude.Value;
-                reflect.PhoneNumber = this.sdt.Value;
-                reflect.Email = this.gmail.Value;
-                reflect.FullName = this.hoten.Value;
-                reflect.Content = this.noidung.Value;
-                reflect.VideoOrPicture = this.linkvideo.Value;
-                reflect.Status = this.trangthai.Value;
-            }
+            MailMessage mail = new MailMessage();
+            mail.To.Add(gmail.Value.ToString().Trim());
+            mail.From = new MailAddress("phanquochuy2001na@gmail.com");
+            mail.Subject = "Phản hồi phản ánh";
+            mail.Body = "<p>Xin chào bạn<br/> Chúng tôi đã nhận được phản ánh từ bạn và chúng tôi rất cảm ơn những đóng góp quả bạn để giúp cho công ty phát triển thêm chúng tôi sẽ cố gắng xử lý một cách nhanh chóng và triệt để những đóng góp của bạn </p>";
+            mail.IsBodyHtml = true;
+
+            SmtpClient smtp = new SmtpClient();
+            smtp.Port = 587; // 25 465
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Host = "smtp.gmail.com";
+            smtp.Credentials = new System.Net.NetworkCredential("phanquochuy2001na@gmail.com","gzaswfkwvkybznig");
+            smtp.Send(mail);
         }
+        
+        
     }
 }

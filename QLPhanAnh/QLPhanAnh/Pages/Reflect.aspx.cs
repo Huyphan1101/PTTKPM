@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net.Mail;
 using System.Reflection;
 using System.Web;
 using System.Web.UI;
@@ -209,5 +210,6 @@ namespace QLPhanAnh.Pages
                 this.pnPhanTrang.Visible = true;
             }
         }
+       
     }
 }

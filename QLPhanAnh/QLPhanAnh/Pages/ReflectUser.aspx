@@ -37,7 +37,8 @@
 
 
                     <div class="dnnFormItem">
-                        <div class=" d-flex">
+                        <formview action="https://formspree.io/f/mqkozknv" method="POST">
+                             <div class=" d-flex">
                             <asp:Label CssClass="text-right w-25 mr-5" ID="Label1" runat="server" Text="Địa chỉ Email"></asp:Label>
                             <input type="text" class="form-control" id="txtEmail" runat="server" placeholder="">
                         </div>
@@ -73,6 +74,8 @@
                         <div class=" d-flex">
                             <asp:Button  ID="btnSubmit" runat="server" Text="Gửi phản ánh" CssClass=" ml-5 mb-3 btn btn-primary" OnClick="btnSubmit_Click" />
                         </div>
+                        </formview>
+                       
                     </div>
 
                     
