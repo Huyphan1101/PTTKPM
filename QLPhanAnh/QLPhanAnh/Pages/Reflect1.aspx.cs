@@ -363,7 +363,8 @@ namespace QLPhanAnh.Pages
             mail.To.Add(gmail.Value.ToString().Trim());
             mail.From = new MailAddress("phanquochuy2001na@gmail.com");
             mail.Subject = "Phản hồi phản ánh";
-            mail.Body = "<p>Xin chào bạn<br/> Chúng tôi đã nhận được phản ánh từ bạn và chúng tôi rất cảm ơn những đóng góp quả bạn để giúp cho công ty phát triển thêm chúng tôi sẽ cố gắng xử lý một cách nhanh chóng và triệt để những đóng góp của bạn </p>";
+            mail.Body = txtContent.Value.ToString();
+                /*"<p>Xin chào bạn<br/> Chúng tôi đã nhận được phản ánh từ bạn và chúng tôi rất cảm ơn những đóng góp quả bạn để giúp cho công ty phát triển thêm chúng tôi sẽ cố gắng xử lý một cách nhanh chóng và triệt để những đóng góp của bạn </p>";*/
             mail.IsBodyHtml = true;
 
             SmtpClient smtp = new SmtpClient();
