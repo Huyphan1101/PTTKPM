@@ -1,4 +1,4 @@
-CREATE DATABASE [ROUTE_MANAGEMENT]
+﻿CREATE DATABASE [ROUTE_MANAGEMENT]
 USE [ROUTE_MANAGEMENT]
 GO
 
@@ -376,3 +376,17 @@ CREATE TABLE [dbo].[DocumentType]
 	)WITH (PAD_INDEX=OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 )ON [PRIMARY]
 GO
+insert into dbo.ReflectType values (N'Chất lượng vi phạm xe buýt')
+insert into dbo.ReflectType values (N'Hạ tầng bến bãi xe buýt')
+insert into dbo.ReflectType values (N'Lộ trình thời gian hoạt động tuyến')
+insert into dbo.ReflectType values (N'Gương người tốt việc tốt khen thưởng')
+insert into dbo.ReflectType values (N'Chê Trách')
+insert into dbo.ReflectType values (N'Khen Thưởng')
+insert into dbo.ReflectType values (N'Vi phạm an toàn giao thông')
+insert into dbo.ReflectType values (N'Vi phạm an toàn đường bộ')
+insert into dbo.ReflectType values (N'Khen thưởng tuyên dương')
+insert into dbo.ReflectType values (N'Vi phạm bến đậu')
+insert into dbo.ReflectType values (N'khen thưởng 11')
+
+insert into dbo.Reflect values (1,'chất lượng vi phạm xe buýt đang có chuyeefu hướng đi lên','emxinbotay0711@gmail.com','Phan Quốc Huy','0904941277','Tôi rất mong các cơ quan đơn nghành vào cuộc khắc phục ngay ','../images/08854f5c83695a370378.jpg','Đã Xử Lý')
+insert into dbo.Reflect values(2,N'Hạ tầng xuống cấp nghiêm trọng',N'phanquochuy2001na@gmail.com',N'Phan Quốc Huy',N'0904941277',N'rất mong các cơ quan đoàn thể vào cuộc giải quyết',N'../images/image_67517953.JPG',N'Đã Xử Lý')
