@@ -10,7 +10,7 @@
         </div>
         <div class="row mb-3">
             <label for="TenLoai" class="form-label col-2">Tên loại</label>
-            <input id="TenLoai" type="text" class="form-control col" placeholder="Nhập vào tên loại xe" runat="server">
+            <input id="TenLoai" type="text" class="form-control col" placeholder="Nhập vào tên loại phản ánh" runat="server">
         </div>
 
         <div class="d-flex justify-content-end">
